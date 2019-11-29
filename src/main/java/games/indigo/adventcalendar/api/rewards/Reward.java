@@ -18,10 +18,6 @@ public abstract class Reward {
 
     private static List<Reward> rewards = new ArrayList<>();
 
-    Reward() {
-        rewards.add(this);
-    }
-
     public abstract void givePlayer (Player player);
 
     public static void addReward (Reward reward) {
@@ -66,6 +62,7 @@ public abstract class Reward {
                                 new Pattern(DyeColor.BROWN, PatternType.CIRCLE_MIDDLE)};
         List<Pattern> bannerPatterns = Arrays.asList(patterns);
         bannerMeta.setPatterns(bannerPatterns);
+        bannerMeta.setDisplayName(ChatColor.GREEN + "Christmas Wreath Banner");
         banner.setItemMeta(bannerMeta);
         addReward(new ItemReward(banner));
         // Day 10 - Christmas crate key

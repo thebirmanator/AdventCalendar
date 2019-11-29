@@ -1,5 +1,6 @@
 package games.indigo.adventcalendar.api.rewards;
 
+import org.bukkit.Bukkit;
 import org.bukkit.entity.Player;
 import org.bukkit.inventory.ItemStack;
 
@@ -15,6 +16,7 @@ public class ItemReward extends Reward {
 
     @Override
     public void givePlayer (Player player) {
+        Bukkit.broadcastMessage("giving player item");
         HashMap<Integer, ItemStack> failed = player.getInventory().addItem(item);
         if (!failed.isEmpty()) {
             for (ItemStack fail : failed.values()) {
