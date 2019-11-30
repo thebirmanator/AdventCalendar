@@ -15,18 +15,16 @@ public class AdventCalendarCommand implements CommandExecutor {
 	public boolean onCommand(CommandSender sender, Command cmd, String label, String[] args) {
 		if(sender instanceof Player) {
 			Player player = (Player) sender;
-			if(player.hasPermission("darks.holiday.adventcalendar")) {
+			if(player.hasPermission("indigo.command.adventcalendar")) {
 				Calendar calendar = Calendar.getCalendar(player);
 				calendar.openCalendar();
-				return true;
 			} else {
 				player.sendMessage(ChatColor.RED + "Sorry, you do not have permission to run this command.");
-				return true;
 			}
 		} else {
 			sender.sendMessage(ChatColor.RED + "Sorry, you cannot run this command.");
-			return true;
 		}
+		return true;
 	}
 
 }

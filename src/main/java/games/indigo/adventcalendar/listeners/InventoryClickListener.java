@@ -2,8 +2,6 @@ package games.indigo.adventcalendar.listeners;
 
 import games.indigo.adventcalendar.api.Calendar;
 import games.indigo.adventcalendar.Main;
-import games.indigo.adventcalendar.api.rewards.Reward;
-import org.bukkit.Bukkit;
 import org.bukkit.ChatColor;
 import org.bukkit.entity.HumanEntity;
 import org.bukkit.entity.Player;

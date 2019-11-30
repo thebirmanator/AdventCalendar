@@ -78,9 +78,13 @@ public abstract class Reward {
         // Day 15 - 1 Zombie Spawner
         addReward(new CmdReward("givespawner %player% zombie 1"));
         // Day 16 - 30min temp global flight
-        addReward(new CmdReward("lp user %player% settemp indigo.command.fly.global true 30m"));
+        List<String> flightLore = Arrays.asList(ChatColor.WHITE + "Gives the gift of flight",
+                                                ChatColor.WHITE + "for 30 minutes",
+                                                "",
+                                                ChatColor.GRAY + "Right click to use");
+        addReward(new ItemReward(Calendar.createItem(Material.TOTEM_OF_UNDYING, 1, ChatColor.AQUA + "" + ChatColor.BOLD + "Angel Wings",  flightLore)));
         // Day 17 - Christmas tag in chat
-        addReward(new CmdReward("givetag %player% christmas"));
+        addReward(new CmdReward("lp user %player% permission set deluxetags.tag.advent2019"));
         // Day 18 - 100 Crystals
         addReward(new CmdReward("givecrystals %player% 100"));
         // Day 19 - 1 Chocolate
