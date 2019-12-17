@@ -84,7 +84,7 @@ public abstract class Reward {
                                                 ChatColor.GRAY + "Right click to use");
         addReward(new ItemReward(Calendar.createItem(Material.TOTEM_OF_UNDYING, 1, ChatColor.AQUA + "" + ChatColor.BOLD + "Angel Wings",  flightLore)));
         // Day 17 - Christmas tag in chat
-        addReward(new CmdReward("lp user %player% permission set deluxetags.tag.advent2019"));
+        addReward(new CmdReward("givetag %player% advent2019"));
         // Day 18 - 100 Crystals
         addReward(new CmdReward("givecrystals %player% 100"));
         // Day 19 - 1 Chocolate
