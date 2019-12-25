@@ -102,6 +102,6 @@ public abstract class Reward {
                                                 ChatColor.WHITE + "so he'll give you presents");
         addReward(new ItemReward(Calendar.createItem(Material.COOKIE, 24, ChatColor.RED + "" + ChatColor.BOLD + "Cookies for Santa", cookieLore)));
         // Day 25 - Christmas Hat
-        addReward(new CmdReward("iagive %player% christmas_hat 1"));
+        addReward(new CmdReward("iagive %player% rudolph_nose 1"));
     }
 }
