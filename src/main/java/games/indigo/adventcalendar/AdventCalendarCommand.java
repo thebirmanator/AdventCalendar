@@ -9,22 +9,22 @@ import org.bukkit.entity.Player;
 
 public class AdventCalendarCommand implements CommandExecutor {
 
-	public String adventcalendar = "adventcalendar";
-	
-	@Override
-	public boolean onCommand(CommandSender sender, Command cmd, String label, String[] args) {
-		if(sender instanceof Player) {
-			Player player = (Player) sender;
-			if(player.hasPermission("indigo.command.adventcalendar")) {
-				Calendar calendar = Calendar.getCalendar(player);
-				calendar.openCalendar();
-			} else {
-				player.sendMessage(ChatColor.RED + "Sorry, you do not have permission to run this command.");
-			}
-		} else {
-			sender.sendMessage(ChatColor.RED + "Sorry, you cannot run this command.");
-		}
-		return true;
-	}
+    public String adventcalendar = "adventcalendar";
+
+    @Override
+    public boolean onCommand(CommandSender sender, Command cmd, String label, String[] args) {
+        if (sender instanceof Player) {
+            Player player = (Player) sender;
+            if (player.hasPermission("indigo.command.adventcalendar")) {
+                Calendar calendar = Calendar.getCalendar(player);
+                calendar.openCalendar();
+            } else {
+                player.sendMessage(ChatColor.RED + "Sorry, you do not have permission to run this command.");
+            }
+        } else {
+            sender.sendMessage(ChatColor.RED + "Sorry, you cannot run this command.");
+        }
+        return true;
+    }
 
 }

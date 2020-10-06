@@ -9,12 +9,12 @@ public class ItemReward extends Reward {
 
     private ItemStack item;
 
-    public ItemReward (ItemStack item) {
+    public ItemReward(ItemStack item) {
         this.item = item;
     }
 
     @Override
-    public void givePlayer (Player player) {
+    public void givePlayer(Player player) {
         HashMap<Integer, ItemStack> failed = player.getInventory().addItem(item);
         if (!failed.isEmpty()) {
             for (ItemStack fail : failed.values()) {

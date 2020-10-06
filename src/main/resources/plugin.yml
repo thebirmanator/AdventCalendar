@@ -6,6 +6,6 @@ description: Advent Calendar 2019
 api-version: 1.14
 commands:
   adventcalendar:
-   usage: /<command>
-   aliases: [advent, adv, adventc]
-   description: Opens the advent calendar
+    usage: /<command>
+    aliases: [ advent, adv, adventc ]
+    description: Opens the advent calendar

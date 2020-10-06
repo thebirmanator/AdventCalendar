@@ -18,9 +18,9 @@ public abstract class Reward {
 
     private static List<Reward> rewards = new ArrayList<>();
 
-    public abstract void givePlayer (Player player);
+    public abstract void givePlayer(Player player);
 
-    public static void addReward (Reward reward) {
+    public static void addReward(Reward reward) {
         rewards.add(reward);
     }
 
@@ -40,8 +40,8 @@ public abstract class Reward {
         // Day 5 - 1 Spawner Wrench
         addReward(new CmdReward("givewrench %player% 1"));
         // Day 6 - Christmas Tree sapling
-        List<String> saplingLore = Arrays.asList(   ChatColor.GREEN + "The fresh scent fills",
-                                                    ChatColor.GREEN + "you with holiday cheer!");
+        List<String> saplingLore = Arrays.asList(ChatColor.GREEN + "The fresh scent fills",
+                ChatColor.GREEN + "you with holiday cheer!");
         addReward(new ItemReward(Calendar.createItem(Material.SPRUCE_SAPLING, 1, ChatColor.DARK_GREEN + "Christmas Tree Sapling", saplingLore)));
         // Day 7 - 1 Black Crystal Block
         addReward(new CmdReward("iagive %player% black_crystal_block"));
@@ -50,16 +50,16 @@ public abstract class Reward {
         // Day 9 - Banner: https://www.planetminecraft.com/banner/christmas-wreath-v6/
         ItemStack banner = Calendar.createItem(Material.BROWN_BANNER, 1, null, null);
         BannerMeta bannerMeta = (BannerMeta) banner.getItemMeta();
-        Pattern[] patterns = {  new Pattern(DyeColor.BLACK, PatternType.BORDER),
-                                new Pattern(DyeColor.GREEN, PatternType.RHOMBUS_MIDDLE),
-                                new Pattern(DyeColor.YELLOW, PatternType.SKULL),
-                                new Pattern(DyeColor.LIME, PatternType.SKULL),
-                                new Pattern(DyeColor.GRAY, PatternType.CREEPER),
-                                new Pattern(DyeColor.RED, PatternType.CREEPER),
-                                new Pattern(DyeColor.BROWN, PatternType.BORDER),
-                                new Pattern(DyeColor.GREEN, PatternType.FLOWER),
-                                new Pattern(DyeColor.GREEN, PatternType.CIRCLE_MIDDLE),
-                                new Pattern(DyeColor.BROWN, PatternType.CIRCLE_MIDDLE)};
+        Pattern[] patterns = {new Pattern(DyeColor.BLACK, PatternType.BORDER),
+                new Pattern(DyeColor.GREEN, PatternType.RHOMBUS_MIDDLE),
+                new Pattern(DyeColor.YELLOW, PatternType.SKULL),
+                new Pattern(DyeColor.LIME, PatternType.SKULL),
+                new Pattern(DyeColor.GRAY, PatternType.CREEPER),
+                new Pattern(DyeColor.RED, PatternType.CREEPER),
+                new Pattern(DyeColor.BROWN, PatternType.BORDER),
+                new Pattern(DyeColor.GREEN, PatternType.FLOWER),
+                new Pattern(DyeColor.GREEN, PatternType.CIRCLE_MIDDLE),
+                new Pattern(DyeColor.BROWN, PatternType.CIRCLE_MIDDLE)};
         List<Pattern> bannerPatterns = Arrays.asList(patterns);
         bannerMeta.setPatterns(bannerPatterns);
         bannerMeta.setDisplayName(ChatColor.GREEN + "Christmas Wreath Banner");
@@ -79,10 +79,10 @@ public abstract class Reward {
         addReward(new CmdReward("givespawner %player% zombie 1"));
         // Day 16 - 30min temp global flight
         List<String> flightLore = Arrays.asList(ChatColor.WHITE + "Gives the gift of flight",
-                                                ChatColor.WHITE + "for 30 minutes",
-                                                "",
-                                                ChatColor.GRAY + "Right click to use");
-        addReward(new ItemReward(Calendar.createItem(Material.TOTEM_OF_UNDYING, 1, ChatColor.AQUA + "" + ChatColor.BOLD + "Angel Wings",  flightLore)));
+                ChatColor.WHITE + "for 30 minutes",
+                "",
+                ChatColor.GRAY + "Right click to use");
+        addReward(new ItemReward(Calendar.createItem(Material.TOTEM_OF_UNDYING, 1, ChatColor.AQUA + "" + ChatColor.BOLD + "Angel Wings", flightLore)));
         // Day 17 - Christmas tag in chat
         addReward(new CmdReward("givetag %player% advent2019"));
         // Day 18 - 100 Crystals
@@ -99,7 +99,7 @@ public abstract class Reward {
         addReward(new CmdReward("iagive %player% eggnog 1"));
         // Day 24 - Cookies for Santa
         List<String> cookieLore = Arrays.asList(ChatColor.WHITE + "Leave this out for Santa",
-                                                ChatColor.WHITE + "so he'll give you presents");
+                ChatColor.WHITE + "so he'll give you presents");
         addReward(new ItemReward(Calendar.createItem(Material.COOKIE, 24, ChatColor.RED + "" + ChatColor.BOLD + "Cookies for Santa", cookieLore)));
         // Day 25 - Christmas Hat
         addReward(new CmdReward("iagive %player% rudolph_nose 1"));

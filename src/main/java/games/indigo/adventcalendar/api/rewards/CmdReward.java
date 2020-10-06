@@ -7,12 +7,12 @@ public class CmdReward extends Reward {
 
     private String cmd;
 
-    public CmdReward (String cmd) {
+    public CmdReward(String cmd) {
         this.cmd = cmd;
     }
 
     @Override
-    public void givePlayer (Player player) {
+    public void givePlayer(Player player) {
         String copy = cmd.replaceAll("%player%", player.getName());
         Bukkit.getServer().dispatchCommand(Bukkit.getConsoleSender(), copy);
     }
